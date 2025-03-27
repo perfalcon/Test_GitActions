@@ -32,5 +32,6 @@ jobs:
       - name: calling an api
         env:
           MY_VAR: Hi there! My name is
+          GH_TOKEN: ${{ github.token }}
         run: |
           gh api https://api.restful-api.dev/objects/7
