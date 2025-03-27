@@ -25,3 +25,12 @@ jobs:
         run: |
           echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
           curl "https://api.restful-api.dev/objects/7"
+  rest-job:
+    name: rest job
+    runs-on: ubuntu-latest
+    steps:
+      - name: calling an api
+        env:
+          MY_VAR: Hi there! My name is
+        run: |
+          gh api https://api.restful-api.dev/objects/7
